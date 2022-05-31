@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Bebas+Neue&family=Odibee+Sans&family=Smooch&family=Macondo&family=Cedarville+Cursive&family=Baloo+Bhai+2&family=Montserrat:wght@300;400;500;700&family=Sansita+Swashed:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    /* background: #d9dadc; */
+    background: url(./images/welcome_page.jpg);
+    /* background: url(./images/cyber-banner.jpg); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/*<-----------------------------------------------LOGO--------------------------------------------->*/
+
+#logo{
+    position: relative; 
+    display: inline-block;
+    /* display: flex; */
+    padding: 7.5px 15px;
+    color: red;
+    letter-spacing: 2px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 60px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#logo:hover{
+    color: white;
+    background-color: #39ff14;
+    box-shadow: 0 0 10px #39ff14, 0 0 40px #39ff14, 0 0 80px #39ff14;
+    transition-delay: 0.5s;
+    border-radius: 10px;
+}
+
+#logo span{
+    position: absolute;
+    display: block;
+}
+
+#logo span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,rgb(255, 0, 0));
+}
+
+#logo:hover span:nth-child(1){
+    left: 100%;
+    transition: 0.5s;
+}
+
+#logo span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,rgb(0, 8, 255));
+}
+
+#logo:hover span:nth-child(3){
+    right: 100%;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+
+#logo span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,brown);
+}
+
+#logo:hover span:nth-child(2){
+    top: 100%;
+    transition: 0.5s;
+    transition-delay: 0.125s;
+}
+
+#logo span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(3600deg,transparent, green);
+}
+
+#logo:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 0.5s;
+    transition-delay: 0.375s;
+}
+
+#logo-container{
+    align-items: center;
+    text-align: center;
+}
+/*<-----------------------------------------------RIGHT SIDE MENU------------------------------------------>*/
+
+.navigation {
+    position: fixed;
+    width: 60px;
+    height: 97.5vh;
+    /* background: rgb(9, 104, 112); */
+    background: rgb(0, 204, 255);
+    transition: 0.5s;
+    overflow: hidden;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 7px;
+    opacity: 0.8;
+    font-weight: 700;
+}
+
+.navigation:hover,
+.navigation.active {
+    width: 300px;
+}
+
+.navigation ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover {
+    background: peru;
+    border-left: 5px solid gold ;
+    border-bottom: 5px solid black;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    /* color: #fff; */
+    color: black;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa {
+    font-size: 24px;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/*<---------------------------------------------LEFT SIDE HAMBURGER----------------------------------------->*/
+
+.toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: green;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 7px 5px 0 0;
+}
+
+.toggle.active {
+    background: red;
+}
+
+.toggle:before {
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.toggle.active:before {
+    content: '\f00d';
+}
+
+/*<--------------------------------------------------TYPING-INTRO------------------------------------------------->*/
+
+.typing-intro{
+    color: rgb(255, 234, 8);
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5em;
+}
+
+.typing-intro h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+/*<--------------------------------------------------OBJECTIVE/ABOUT----------------------------------------------->*/
+
+.objectives{
+    color: rgb(133, 65, 65);
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 1em;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.intro{
+    font-size: 2rem;
+    color: rgb(137, 121, 121);
+    margin-top: 1em;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2.5px;
+}
+
+.objectives .intro span{
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    color: red;
+}
+
+/* <----------------------------------------------COORDINATORS---------------------------------------------------> */
+
+#coordinator{
+    text-align: center;
+    margin-top: 4em;
+}
+
+#coordinator h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#coordinator h1 span{
+    color: orange;
+    font-size: 4rem;
+}
+
+
+/* <------------------------------------------------UTILITY CLASSES-----------------------------------------------> */
+
+.m60{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+/*<--------------------------------------------------RESPONSIVENESS----------------------------------------------->*/
+
+/* @media (max-width: 767px) {
+    .navigation{
+        left: -60px;
+    }
+
+    #logo{
+        margin-left: px;
+        margin-top: px;
+        font-size: 1rem;
+    }
+    
+    .navigation.active {
+        left: 0px;
+        width: 70%;
+    }
+
+    .toggle{
+        margin-top: 17px;
+        margin-right: 17px;
+    }
+
+    .typing-intro h1{
+        font-size: 1.5rem;
+    }
+
+} */
